@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Administrador de Pacientes</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lumen/bootstrap.min.css" integrity="sha384-GzaBcW6yPIfhF+6VpKMjxbTx6tvR/yRd/yJub90CqoIn2Tz4rRXlSpTFYMKHCifX" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/social-media.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+        .login-container {
+            max-width: 300px;
+            margin: 0 auto;
+            margin-top: 125px;
+            position: relative;
+            text-align: center;
+        }
+        .icon {
+            margin-top: 20px; /* Ajusta el margen superior de la imagen según tus preferencias */
+        }
+        .icon img {
+            width: 100px; /* Ajusta el tamaño según tus preferencias */
+            height: 100px;
+        }
+        .container {
+            max-width: 400px; /* Establece el ancho máximo del contenedor */
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="login-container">
+        <h1 class="text-center my-8 titulo">
+            LOGIN
+        </h1>
+        <class="icon">
+            <img src="img/usuario.png" alt="User Icon"> <br><br>
+    
+        </class>
+        <form id="login-form" onsubmit="return validateLogin()">
+            <div class="form-group">
+                <input type="text" id="username" name="username" class="form-control" placeholder="Usuario" required />
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" required />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+            </div>
+    </div>
+    </div>
+</div>
+
+<script>
+    function validateLogin() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username === "admin" && password === "admin") {
+            window.location.href = "citas.html";
+            return false; // Prevent form submission
+        } else {
+            alert("Usuario o contraseña incorrectos.");
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
