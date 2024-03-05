@@ -3,7 +3,7 @@ Práctica de Programación Orientada a Objetos con JavaScript
 
 <h2 align="center">
    <br>
-      https://jfelixzuniga.github.io/Administrador-citas-Veterinaria/
+      Pruebas de Software
    <br>
    <br>
    <img src="./chrome-capture.gif">
